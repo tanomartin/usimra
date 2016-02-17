@@ -6,38 +6,47 @@
 			<span class="sr-only">Navegacion</span> <span class="icon-bar"></span>
 			<span class="icon-bar"></span> <span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand visible-md visible-lg" href="index.html">
-        	<img class="img-responsive" src="images/home/logo.png" alt="" width="88" style="margin-top: -10px">
-        </a>
-        <a class="navbar-brand visible-lg" href="index.html" style="margin-top: -10px"> Union de Sindicatos de la Insdustria <br> Maderera de la Republica Argentina</a>
-        <a class="navbar-brand visible-md visible-sm visible-xs" href="index.html">U.S.I.M.R.A.</a>
+		<a class="navbar-brand visible-md visible-lg" href="index.html"> <img
+			class="img-responsive" src="images/home/logo.png" alt="" width="88"
+			style="margin-top: -10px">
+		</a> <a class="navbar-brand visible-lg" href="index.html"
+			style="margin-top: -10px"> Union de Sindicatos de la Insdustria <br>
+			Maderera de la Republica Argentina
+		</a> <a class="navbar-brand visible-md visible-sm visible-xs"
+			href="index.html">U.S.I.M.R.A.</a>
 	</div>
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
-			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Nostros <b class="caret"></b></a>
+			<li class="dropdown"><a href="#" class="dropdown-toggle"
+				data-toggle="dropdown">Nosotros <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a href="fundamentos.html">Fundamentos</a></li>
-					<li><a href="autoridades.html">Autoridades</a></li>					
+					<li><a href="autoridades.html">Autoridades</a></li>
 					<li><a href="sindicatos.html">Sindicatos</a></li>
-				</ul>
-			</li>
-			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Afiliados <b class="caret"></b></a>
+				</ul></li>
+			<li class="dropdown"><a href="#" class="dropdown-toggle"
+				data-toggle="dropdown">Leyes y Normas <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="convenio.html">Convenio Colectivo de  Trabajo 335-75</a></li>
+					<li><a href="convenio.html">Convenio Colectivo de Trabajo
+							335-75</a></li>
 					<li><a href="escalas.html">Escalas Salariales</a></li>
 					<li><a href="acuerdos.html">Acuerdos Salariales</a></li>
+				</ul></li>
+			<li class="dropdown"><a href="#" class="dropdown-toggle"
+				data-toggle="dropdown">Afiliados <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Beneficios</a></li>
+					<li class="dropdown-submenu"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown">Turismo</a>
+						<ul class="dropdown-menu" style="min-width: 230px">
+							<li><a href="hoteles.html">Hoteles, Colonias, Bongalows</a></li>
+							<li><a href="centros.html">Centros Recreativos</a></li>
+							<li><a href="infantil.html">Plan Turismo Infantil</a></li>
+						</ul></li>
 					<li><a href="faq.html">Preguntas Frecuentes</a></li>
 					<li><a href="#">Revista "El Maderero"</a></li>
 					<li><a href="links.html">Enlases</a></li>
-				</ul>
-			</li>
-			<li class="dropdown"><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">O.S.P.I.M. <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="http://www.ospim.com.ar/" target="_blank">Pagina Oficial</a></li>
-					<li><a href="plan-pago.html">Plan de Facilidades de Pago</a></li>
-					<li><a href="contribucion.html">Contribucion Excpecional y Extraordinaria</a></li>
 				</ul></li>
 			<li class="dropdown"><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">Intranet <b class="caret"></b></a>
@@ -46,11 +55,13 @@
 					<li><a href="aplicativo.html">Empresas</a></li>
 				</ul></li>
 			<li class="dropdown"><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">Turismo <b class="caret"></b></a>
+				data-toggle="dropdown">O.S.P.I.M. <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="hoteles.html">Hoteles, Colonias, Bongalows</a></li>
-					<li><a href="centros.html">Centros Recreativos</a></li>
-					<li><a href="infantil.html">Plan Turismo Infantil</a></li>
+					<li><a href="http://www.ospim.com.ar/" target="_blank">Pagina
+							Oficial</a></li>
+					<li><a href="plan-pago.html">Plan de Facilidades de Pago</a></li>
+					<li><a href="contribucion.html">Contribucion Excpecional y
+							Extraordinaria</a></li>
 				</ul></li>
 			<li><a href="contacto.html">Contacto</a></li>
 		</ul>
@@ -58,3 +69,21 @@
 	<!-- /.navbar-collapse -->
 </div>
 <!-- /.container -->
+
+<script>
+	$(function() {
+		$(document).ready(
+				function() {
+					$('ul.dropdown-menu [data-toggle=dropdown]')
+							.on(
+									'click',
+									function(event) {
+										event.preventDefault();
+										event.stopPropagation();
+										$(this).parent().siblings()
+												.removeClass('open');
+										$(this).parent().toggleClass('open');
+									});
+				});
+	});
+</script>
