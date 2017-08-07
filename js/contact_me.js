@@ -16,6 +16,7 @@ $(function() {
             var name = $("input#name").val();
             var phone = $("input#phone").val();
             var email = $("input#email").val();
+            var origen = $("input#origen").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
@@ -29,6 +30,7 @@ $(function() {
                     name: name,
                     phone: phone,
                     email: email,
+                    origen: origen,
                     message: message
                 },
                 cache: false,
@@ -38,7 +40,7 @@ $(function() {
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Su Mensdaje ha sido enviado satisfactorioamente. </strong>");
+                        .append("<strong>Su Mensaje ha sido enviado satisfactorioamente. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
@@ -50,7 +52,7 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Disculpe " + firstName + " el servidor de correo no esta respondiendo...</strong> Podría por favor enviarme un correo electrónico directamente a <a href='mailto:contacto@ospim.com.ar?Subject=mensaje de ospim.com.ar'>contacto@ospim.com.ar</a>. Disculpe por las molestias ocasionadas");
+                    $('#success > .alert-danger').append("<strong>Disculpe " + firstName + " el servidor de correo no esta respondiendo...</strong> Podrï¿½a por favor enviarme un correo electrï¿½nico directamente a <a href='mailto:contacto@ospim.com.ar?Subject=mensaje de ospim.com.ar'>contacto@ospim.com.ar</a>. Disculpe por las molestias ocasionadas");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
